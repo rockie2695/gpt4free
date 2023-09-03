@@ -31,7 +31,7 @@ def bing():
         listPrompt = literal_eval(prompt)
 
         response = g4f.ChatCompletion.create(
-            model=g4f.Model.gpt_4, provider=Bing, messages=listPrompt)
+            model=g4f.models.gpt_4, provider=Bing, messages=listPrompt)
 
         return Response(dumps({"content": response}), mimetype='application/json; charset=utf-8')
     except Exception as ee:
@@ -50,7 +50,7 @@ def chatgptai():
         listPrompt = literal_eval(prompt)
 
         response = g4f.ChatCompletion.create(
-            model=g4f.Model.gpt_4, provider=ChatgptAi, messages=listPrompt)
+            model=g4f.models.gpt_4, provider=ChatgptAi, messages=listPrompt)
 
         return Response(dumps({"content": response}), mimetype='application/json; charset=utf-8')
     except Exception as ee:
@@ -69,7 +69,7 @@ def liaobots():
         listPrompt = literal_eval(prompt)
 
         response = g4f.ChatCompletion.create(
-            model=g4f.Model.gpt_4, provider=Liaobots, messages=listPrompt)
+            model=g4f.models.gpt_4, provider=Liaobots, messages=listPrompt)
 
         return Response(dumps({"content": response}), mimetype='application/json; charset=utf-8')
     except Exception as ee:
