@@ -7,6 +7,10 @@ browser_cookie3
 websockets
 js2py
 quickjs
-flask
-flask-cors
 httpx
+pymongo==4.4.1
+flask==2.3.2
+flask_cors==4.0.0
+flask-compress==1.13
+flask-talisman==1.0.0
+gunicorn==20.1.0
